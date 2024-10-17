@@ -1,7 +1,8 @@
 #!/home/ver/env2/bin/python
 '''
-File: qmh4.py
+File: qmh.py
 Created Date: Wednesday, September 25th 2024, 11:57:47 pm
+Author: alex-crouch
 
 Project Ver 2024
 '''
