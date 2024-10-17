@@ -107,8 +107,8 @@ class AudioStreamer(object):
         self.response = None
         self.starttime = None
         self.call = False
-        self.waiting_sound, self.file_samplerate = sf.read('/home/ver/cr2/lib_client/waiting.wav')
-        self.no_internet_sound, self.file_samplerate = sf.read('/home/ver/cr2/lib_client/internot.wav')
+        self.waiting_sound, self.file_samplerate = sf.read('./resources/waiting.wav')
+        self.no_internet_sound, self.file_samplerate = sf.read('./resources/internot.wav')
     
     def play_loop(self, no_loop_event, sound):
         time.sleep(2)
@@ -282,12 +282,12 @@ class QueuedMessageHandler:
         
     def load_sounds(self):
         sound_files = {
-            "cancel": '/home/ver/cr2/lib_client/cancel.wav',
-            "desc": '/home/ver/cr2/lib_client/desc.wav',
-            "chat": '/home/ver/cr2/lib_client/chat.wav',
-            "helper": '/home/ver/cr2/lib_client/helper.wav',
-            "waiting": '/home/ver/cr2/lib_client/waiting.wav',
-            "no_internet": '/home/ver/cr2/lib_client/internot.wav'
+            "cancel": './resources/cancel.wav',
+            "desc": './resources/desc.wav',
+            "chat": './resources/chat.wav',
+            "helper": './resources/helper.wav',
+            "waiting": './resources/waiting.wav',
+            "no_internet": './resources/internot.wav'
         }
         for name, file_path in sound_files.items():
             self.sound_player.load_sound(name, file_path)
